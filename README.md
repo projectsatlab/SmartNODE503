@@ -1,5 +1,5 @@
-# SmartNODE503
-Smart NODE 503 hardware and software platform.
+# SmartezNODE503
+Smart ezNODE 503 hardware and software platform.
 
 Hardware design assembly into 503 electric plant box based on ESP8266-012F WIFI module. 
 
