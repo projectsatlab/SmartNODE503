@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -148,13 +148,13 @@
 <wire x1="25.4" y1="25.4" x2="25.4" y2="0" width="0.4064" layer="21"/>
 <wire x1="25.4" y1="0" x2="0" y2="0" width="0.4064" layer="21"/>
 <wire x1="0" y1="0" x2="0" y2="25.4" width="0.4064" layer="21"/>
-<pad name="1" x="2.54" y="22.57" drill="0.8" shape="square"/>
-<pad name="5" x="2.54" y="2.54" drill="0.8" shape="square"/>
-<pad name="3" x="22.86" y="2.54" drill="0.8" shape="square"/>
-<pad name="2" x="7.62" y="22.57" drill="0.8" shape="square" rot="R90"/>
-<pad name="4" x="12.7" y="2.54" drill="0.8" shape="square"/>
-<text x="0" y="29" size="1.27" layer="25">&gt;NAME</text>
-<text x="0" y="-3" size="1.27" layer="27">&gt;NAME</text>
+<pad name="1" x="17.78" y="22.86" drill="0.8" shape="square"/>
+<pad name="3" x="2.54" y="2.56" drill="0.8" shape="square"/>
+<pad name="5" x="22.86" y="2.56" drill="0.8" shape="square"/>
+<pad name="2" x="22.86" y="22.86" drill="0.8" shape="square" rot="R90"/>
+<pad name="4" x="12.7" y="2.56" drill="0.8" shape="square"/>
+<text x="0" y="26.67" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="TRACO_TMLM04YZZ">
 <wire x1="0" y1="27" x2="36" y2="27" width="0.4064" layer="21"/>
@@ -28613,8 +28613,8 @@ DIN A3, landscape with location and doc. field</description>
 </device>
 <device name="2" package="TRACO_TMPS03XXX">
 <connects>
-<connect gate="G$1" pin="+VOUT1" pad="5"/>
-<connect gate="G$1" pin="+VOUT2/NC" pad="3"/>
+<connect gate="G$1" pin="+VOUT1" pad="3"/>
+<connect gate="G$1" pin="+VOUT2/NC" pad="5"/>
 <connect gate="G$1" pin="AC1" pad="1"/>
 <connect gate="G$1" pin="AC2" pad="2"/>
 <connect gate="G$1" pin="COM" pad="4"/>
@@ -33337,7 +33337,7 @@ ZIGBEE or SIGFOX on XBEE form factor</text>
 <instance part="X1" gate="-28" x="86.36" y="38.1" smashed="yes">
 <attribute name="NAME" x="83.312" y="38.862" size="1.524" layer="95" rot="R180"/>
 </instance>
-<instance part="SUPPLY1" gate="1" x="303.53" y="213.36" rot="MR0"/>
+<instance part="SUPPLY1" gate="1" x="293.37" y="213.36" rot="MR0"/>
 <instance part="SUPPLY2" gate="1" x="331.47" y="33.02" rot="MR0"/>
 <instance part="SUPPLY3" gate="1" x="293.37" y="33.02" rot="MR0"/>
 <instance part="X4" gate="-1" x="300.99" y="71.12" smashed="yes" rot="MR0">
@@ -33672,8 +33672,8 @@ ZIGBEE or SIGFOX on XBEE form factor</text>
 </segment>
 <segment>
 <pinref part="PWS1" gate="G$1" pin="COM"/>
-<wire x1="308.61" y1="218.44" x2="303.53" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="303.53" y1="218.44" x2="303.53" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="308.61" y1="218.44" x2="293.37" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="293.37" y1="218.44" x2="293.37" y2="215.9" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -33906,11 +33906,6 @@ ZIGBEE or SIGFOX on XBEE form factor</text>
 <pinref part="X1" gate="-1" pin="1"/>
 </segment>
 <segment>
-<pinref part="PWS1" gate="G$1" pin="+VOUT1"/>
-<wire x1="308.61" y1="220.98" x2="303.53" y2="220.98" width="0.1524" layer="91"/>
-<label x="300.99" y="220.98" size="1.27" layer="95" rot="MR0"/>
-</segment>
-<segment>
 <wire x1="326.39" y1="71.12" x2="331.47" y2="71.12" width="0.1524" layer="91"/>
 <label x="334.01" y="71.12" size="1.27" layer="95"/>
 <pinref part="X4" gate="-2" pin="1"/>
@@ -33956,6 +33951,10 @@ ZIGBEE or SIGFOX on XBEE form factor</text>
 <label x="208.28" y="143.51" size="1.27" layer="95"/>
 <wire x1="203.2" y1="142.24" x2="203.2" y2="143.51" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="143.51" x2="205.74" y2="143.51" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="308.61" y1="215.9" x2="303.53" y2="215.9" width="0.1524" layer="91"/>
+<label x="295.91" y="215.9" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="CS_DIS" class="0">

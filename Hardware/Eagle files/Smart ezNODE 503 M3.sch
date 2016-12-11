@@ -510,11 +510,11 @@ Source: Samtec TSW.pdf</description>
 <wire x1="25.4" y1="25.4" x2="25.4" y2="0" width="0.4064" layer="21"/>
 <wire x1="25.4" y1="0" x2="0" y2="0" width="0.4064" layer="21"/>
 <wire x1="0" y1="0" x2="0" y2="25.4" width="0.4064" layer="21"/>
-<pad name="1" x="2.54" y="22.57" drill="0.8" shape="square"/>
-<pad name="5" x="2.54" y="2.54" drill="0.8" shape="square"/>
-<pad name="3" x="22.86" y="2.54" drill="0.8" shape="square"/>
-<pad name="2" x="7.62" y="22.57" drill="0.8" shape="square" rot="R90"/>
-<pad name="4" x="12.7" y="2.54" drill="0.8" shape="square"/>
+<pad name="1" x="17.78" y="22.86" drill="0.8" shape="square"/>
+<pad name="3" x="2.54" y="2.56" drill="0.8" shape="square"/>
+<pad name="5" x="22.86" y="2.56" drill="0.8" shape="square"/>
+<pad name="2" x="22.86" y="22.86" drill="0.8" shape="square" rot="R90"/>
+<pad name="4" x="12.7" y="2.56" drill="0.8" shape="square"/>
 <text x="0" y="26.67" size="1.27" layer="25">&gt;NAME</text>
 <text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
 </package>
@@ -28474,8 +28474,8 @@ Source: Samtec SSW.pdf</description>
 </device>
 <device name="2" package="TRACO_TMPS03XXX">
 <connects>
-<connect gate="G$1" pin="+VOUT1" pad="5"/>
-<connect gate="G$1" pin="+VOUT2/NC" pad="3"/>
+<connect gate="G$1" pin="+VOUT1" pad="3"/>
+<connect gate="G$1" pin="+VOUT2/NC" pad="5"/>
 <connect gate="G$1" pin="AC1" pad="1"/>
 <connect gate="G$1" pin="AC2" pad="2"/>
 <connect gate="G$1" pin="COM" pad="4"/>
@@ -33169,7 +33169,7 @@ Grid 5.00 mm&lt;p&gt;
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="GND2" gate="1" x="213.36" y="213.36"/>
+<instance part="GND2" gate="1" x="223.52" y="213.36"/>
 <instance part="X1" gate="-1" x="181.61" y="69.85" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="181.61" y="73.66" size="1.778" layer="96"/>
 <attribute name="NAME" x="184.658" y="70.612" size="1.524" layer="95" rot="MR180"/>
@@ -33324,17 +33324,15 @@ Grid 5.00 mm&lt;p&gt;
 <instance part="X3" gate="-6" x="307.34" y="162.56"/>
 <instance part="X3" gate="-7" x="307.34" y="121.92"/>
 <instance part="X3" gate="-8" x="307.34" y="114.3"/>
-<instance part="PWS1" gate="G$1" x="193.04" y="218.44"/>
+<instance part="PWS1" gate="G$1" x="193.04" y="218.44" smashed="yes">
+<attribute name="NAME" x="182.88" y="227.33" size="1.778" layer="95"/>
+<attribute name="VALUE" x="182.88" y="207.01" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="VCC33" class="1">
-<segment>
-<wire x1="208.28" y1="220.98" x2="213.36" y2="220.98" width="0.1524" layer="91"/>
-<label x="215.9" y="220.98" size="1.27" layer="95"/>
-<pinref part="PWS1" gate="G$1" pin="+VOUT1"/>
-</segment>
 <segment>
 <pinref part="X1" gate="-2" pin="1"/>
 <wire x1="207.01" y1="69.85" x2="212.09" y2="69.85" width="0.1524" layer="91"/>
@@ -33377,11 +33375,16 @@ Grid 5.00 mm&lt;p&gt;
 <junction x="283.21" y="123.19"/>
 <wire x1="283.21" y1="123.19" x2="283.21" y2="125.73" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<wire x1="208.28" y1="215.9" x2="213.36" y2="215.9" width="0.1524" layer="91"/>
+<label x="215.9" y="215.9" size="1.27" layer="95"/>
+<pinref part="PWS1" gate="G$1" pin="+VOUT2/NC"/>
+</segment>
 </net>
 <net name="GND" class="1">
 <segment>
-<wire x1="208.28" y1="218.44" x2="213.36" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="218.44" x2="213.36" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="218.44" x2="223.52" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="218.44" x2="223.52" y2="215.9" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <pinref part="PWS1" gate="G$1" pin="COM"/>
 </segment>
@@ -33650,14 +33653,14 @@ Grid 5.00 mm&lt;p&gt;
 <label x="251.46" y="100.33" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="N$1" class="2">
+<net name="N$1" class="0">
 <segment>
 <pinref part="X2" gate="-1" pin="SK"/>
 <pinref part="PWS1" gate="G$1" pin="AC1"/>
 <wire x1="172.72" y1="220.98" x2="177.8" y2="220.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="2">
+<net name="N$2" class="0">
 <segment>
 <pinref part="X2" gate="-2" pin="SK"/>
 <pinref part="PWS1" gate="G$1" pin="AC2"/>
