@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -35236,9 +35236,8 @@ body 3x3mm, pitch 1mm</description>
 <smd name="6" x="-1" y="1.4" dx="0.7" dy="0.4" layer="1" rot="R90"/>
 <text x="-2.25" y="-1.875" size="1.016" layer="25" ratio="18" rot="R90">&gt;NAME</text>
 <text x="2.875" y="-1.875" size="0.8128" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
-<rectangle x1="-1.25" y1="-0.75" x2="1.25" y2="0.75" layer="29"/>
-<rectangle x1="-1.125" y1="-0.625" x2="1.125" y2="0.625" layer="31"/>
 <rectangle x1="-2.125" y1="-1.625" x2="-1.75" y2="-1.25" layer="21"/>
+<smd name="NC" x="0" y="0" dx="2.4" dy="1.5" layer="1"/>
 </package>
 </packages>
 <symbols>
