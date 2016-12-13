@@ -181,7 +181,7 @@
 <wire x1="69" y1="29.6" x2="69.5" y2="29.6" width="0" layer="20"/>
 <wire x1="69.5" y1="29.6" x2="69.5" y2="18.4" width="0" layer="20"/>
 <wire x1="69.5" y1="18.4" x2="69" y2="18.4" width="0" layer="20"/>
-<text x="70" y="59.5" size="1.27" layer="25" font="vector" ratio="12" align="top-left">Smart ezNODE 503 
+<text x="70" y="59.5" size="1.016" layer="25" font="vector" ratio="12" align="top-left">Smart ezNODE 503 
 M3 (power) HW 1.0 Rev. 0</text>
 <hole x="72.4" y="29.6" drill="0.5"/>
 <hole x="73.8" y="29.6" drill="0.5"/>
